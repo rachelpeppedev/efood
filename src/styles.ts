@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-const cores = {
+export const cores = {
   coral: '#E66767',
   rosa: '#FFEBD9',
   rosaClaro: '#FFF8F2',
