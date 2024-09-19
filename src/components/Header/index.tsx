@@ -1,13 +1,15 @@
-import { HeaderFundo, Titulo, Logo} from  './styles'
+import { HeaderContainer, ItensCarrinho, LinkRestaurantes, LogoI } from "./styles"
 
-import fundo from '../../assets/images/fundo.png'
 import logo from '../../assets/images/logo.png'
 
 const Header = () => (
-  <HeaderFundo style={{ backgroundImage: `url(${fundo})`}}>
-    <Logo src={logo} alt="EFOOD"/>
-    <Titulo>Viva experiências gastronômicas no conforto da sua casa</Titulo>
-  </HeaderFundo>
+  <HeaderContainer>
+    <div className="container">
+      <LinkRestaurantes href="/">Restaurantes</LinkRestaurantes>
+      <LogoI src={logo} alt="EFOOD" />
+      <ItensCarrinho>0 produto(s) no carrinho</ItensCarrinho>
+    </div>
+  </HeaderContainer>
 
 )
 

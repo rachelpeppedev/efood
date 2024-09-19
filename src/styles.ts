@@ -7,7 +7,6 @@ export const cores = {
   branca: '#FFFFFF'
 }
 
-
 export const GlobalCss = createGlobalStyle`
   * {
     margin: 0;
@@ -19,4 +18,10 @@ export const GlobalCss = createGlobalStyle`
   body {
     background-color: ${cores.rosaClaro};
     color: ${cores.coral};
+
+  .container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    }
 `
