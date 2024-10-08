@@ -11,7 +11,9 @@ export type RestaurantCapa = {
   tipo: string
   avaliacao: number
   descricao: string
+  capa: string
   cardapio: {
+    map: any;
     foto: string
     preco: number
     id: number
@@ -22,10 +24,11 @@ export type RestaurantCapa = {
 }
 
 const RestaurantList = () => {
+  const [destaque, setDestaque] = useState('Destaque da semana')
   const [restaurants, setRestaurants] = useState<RestaurantCapa[]>([])
 
   useEffect(() => {
-    fetch('https://fake-api-tau.vercel.app/efood')
+    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
     .then((res) => res.json())
     .then((res) => setRestaurants(res))
   }, [])
@@ -38,9 +41,9 @@ const RestaurantList = () => {
         key={restaurant.id}
         titulo={restaurant.titulo}
         nota={restaurant.avaliacao.toString()}
-        tipos={restaurant.destacado ? ['Destaque'] : []}
+        tipos={restaurant.destacado ? [destaque, restaurant.tipo] : [restaurant.tipo]}
         descricao={restaurant.descricao}
-        imagem={restaurant.cardapio.foto}
+        imagem={restaurant.capa}
         linkperfil={`/perfil/${restaurant.id}`}
         />
       ))}

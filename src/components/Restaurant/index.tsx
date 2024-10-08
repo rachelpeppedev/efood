@@ -16,7 +16,7 @@ type Props = {
 }
 
 const Restaurant = ({titulo, nota, tipos, descricao, imagem, linkperfil}: Props) => (
-  <Card>
+  <Card className="container">
     <img src={imagem} alt={titulo} />
     <Tipos>
       {tipos.map(tipo => <TagContainer key={tipo}>{tipo}</TagContainer> )}

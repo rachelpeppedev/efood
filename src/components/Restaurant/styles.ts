@@ -10,6 +10,13 @@ export const Card = styled.div`
   ${TagContainer} {
   margin-right: 8px;
   }
+
+  > img {
+  max-width: 472px;
+  height: 217px;
+  width: 100%;
+  object-fit: cover;
+  }
 `
 
 export const TituloAvaliacao = styled.div`

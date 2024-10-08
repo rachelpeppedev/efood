@@ -1,11 +1,13 @@
 import { ButtonContainer } from "../Button/styles"
 import { DescPrato, NomePrato, Pratos } from "./styles"
 
-type Props = {
+export type Props = {
   imagem: string
   nome: string
   descricao: string
+  id: number
 }
+
 const Product = ({ imagem, nome, descricao}: Props) => (
   <div className="container">
     <Pratos>

@@ -7,7 +7,7 @@ export const ButtonContainer = styled.button`
   background-color: ${cores.coral};
   color: ${cores.rosaClaro};
   font-size: 14px;
-  font-weigth: 700;
+  font-weight: 700;
   padding: 4px 6px;
   display: inline-block;
   cursor: pointer;
@@ -16,7 +16,7 @@ export const ButtonLink = styled(Link)`
   background-color: ${cores.coral};
   color: ${cores.rosaClaro};
   font-size: 14px;
-  font-weigth: 700;
+  font-weight: 700;
   padding: 4px 6px;
   display: inline-block;
   text-decoration: none;
