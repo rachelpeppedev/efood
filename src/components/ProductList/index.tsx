@@ -28,13 +28,14 @@ const ProductList = () => {
       <>
       <ContainerList>
         <List>
-        {perfil && perfil.cardapio.map(() =>(
-          <li key={perfil.id}>
+        {perfil.cardapio.map((item: any) =>(
+          <li key={item.id} onClick={() => {setModalEstaAberto(true);
+          }}>
             <Product
-            id={perfil.cardapio.id}
-            imagem={perfil.cardapio.foto}
-            nome={perfil.cardapio.nome}
-            descricao={perfil.cardapio.descricao}
+            id={item.id}
+            imagem={item.foto}
+            nome={item.nome}
+            descricao={item.descricao}
             />
           </li>
         ))}
@@ -42,18 +43,19 @@ const ProductList = () => {
       </ContainerList>
 
       <Modal className={modalEstaAberto ? 'visivel' : ''}>
-        <ModalContent className="container">
-          <ImagemFood src={perfil.cardapio.foto} />
-          <ModalContainer>
-            <TituloFood>{perfil.cardapio.nome}</TituloFood>
-            <DescFood>{perfil.cardapio.descricao}
-            <p>Serve: {perfil.cardapio.porcao}</p>
-            </DescFood>
-            <ButtonCar type="button">Adicionar ao carrinho - {perfil.cardapio.preco}</ButtonCar>
-          </ModalContainer>
-          <IconFechar src={fechar} alt="fechar"/>
+          <ModalContent key={perfil.cardapio.id} className="container">
+                <ImagemFood src={perfil.cardapio.foto} alt="imagem"/>
+                <ModalContainer>
+                  <TituloFood>{perfil.cardapio.nome}</TituloFood>
+                  <DescFood>{perfil.cardapio.descricao}
+                  <p>Serve: {perfil.cardapio.porcao}</p>
+                  </DescFood>
+                  <ButtonCar type="button">Adicionar ao carrinho - {perfil.cardapio.preco}</ButtonCar>
+                </ModalContainer>
+
+          <IconFechar onClick={() => setModalEstaAberto(false)} src={fechar} alt="fechar"/>
         </ModalContent>
-        <div className="overlay"></div>
+        <div onClick={() => setModalEstaAberto(false)} className="overlay"></div>
       </Modal>
     </>
   )

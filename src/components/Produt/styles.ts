@@ -20,7 +20,10 @@ export const Pratos = styled.div`
   }
 `
 export const Imagem = styled.img`
-
+  max-width: 304px;
+  height: 167px;
+  width: 100%;
+  object-fit: cover;
 `
 export const NomePrato = styled.h3`
   font-size: 16px;

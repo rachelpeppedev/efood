@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { cores } from "../../styles";
 
 export const Imagem = styled.div`
-  max-width: 1366px;
   width: 100%;
   height: 280px;
   display: block;
@@ -10,6 +9,7 @@ export const Imagem = styled.div`
   color: ${cores.branca};
   background-repeat: no-repeat;
   background-size: cover;
+  background-size: 100%;
   position: relative;
 
   &::after {

@@ -13,7 +13,7 @@ export type RestaurantCapa = {
   descricao: string
   capa: string
   cardapio: {
-    map: any;
+    map: any
     foto: string
     preco: number
     id: number
