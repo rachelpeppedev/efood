@@ -65,7 +65,7 @@ export const TituloFood = styled.h4`
   margin-top: 32px;
 `
 
-export const DescFood = styled.p`
+export const DescFood = styled.div`
   max-width: 656px;
   color: ${cores.branca};
   font-size: 14px;

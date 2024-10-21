@@ -5,7 +5,7 @@ import { ContainerList, ImagemFood, IconFechar, List, Modal, ModalContainer, Mod
 import { RestaurantCapa } from "../RestaurantList"
 
 import fechar from '../../assets/images/fechar.png'
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom"
 
 const ProductList = () => {
   const {id} = useParams()
@@ -17,7 +17,7 @@ const ProductList = () => {
   useEffect(() => {
     fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
     .then((res) => res.json())
-    .then((res) => setPerfil(res))
+    .then((res) =>  setPerfil(res))
   }, [id])
 
   if (!perfil) {
@@ -52,7 +52,6 @@ const ProductList = () => {
                   </DescFood>
                   <ButtonCar type="button">Adicionar ao carrinho - {perfil.cardapio.preco}</ButtonCar>
                 </ModalContainer>
-
           <IconFechar onClick={() => setModalEstaAberto(false)} src={fechar} alt="fechar"/>
         </ModalContent>
         <div onClick={() => setModalEstaAberto(false)} className="overlay"></div>
